@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:zahlensysteme/umrechnung_binary.dart';
+import 'package:zahlensysteme/umrechnung_decimal.dart';
 
 /// Beeinhaltet alle Umrechnungsformen um von Binär, Dezimal oder Hexadezimal zu berechnen
 
@@ -26,7 +27,7 @@ class ZahlensystemUmrechnung {
       case '1':
         binUmrechnung(zahl);
       case '2':
-        dezUmrechnung();
+        dezUmrechnung(zahl);
       case '3':
         hexUmrechnung();
       default:
@@ -45,12 +46,13 @@ class ZahlensystemUmrechnung {
       case '1':
         print(UmrechnungBinary().binToDez(zahl));
       case '2':
-        print(UmrechnungBinary().binToHex(zahl));
+        int dezZahl = UmrechnungBinary().binToDez(zahl);
+        print(UmrechnungBinary().binToHex(dezZahl));
     }
   }
 
   /// Gui für die Umrechnung von Dezimal zu Binär oder Hex
-  void dezUmrechnung() {
+  void dezUmrechnung(int zahl) {
     print('Möchten sie zu Dezimal oder Hexadezimal umrechnen?'); // den User fragen zu was er umrechnen Möchte
     print('1:Binär');
     print('2:Hexadezimal');
@@ -59,7 +61,7 @@ class ZahlensystemUmrechnung {
       case '1':
       //dezToBin();
       case '2':
-      //dezToHex();
+        UmrechnungBinary().binToHex(zahl);
     }
   }
 
