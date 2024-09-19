@@ -44,6 +44,7 @@ class UmrechnungBinary {
           hexaDezimal = restWert.toString() + hexaDezimal;
       }
     }
+    print('HexaDezimal: $hexaDezimal');
     return hexaDezimal;
   }
 }
