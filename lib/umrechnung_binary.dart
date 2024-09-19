@@ -7,6 +7,8 @@ class UmrechnungBinary {
     int restWert = 0;
     int anzahlVerschiebung = 0;
     int dezZahl = 0;
+
+    // geht die schleife solange durch bis man das Komma nicht mehr schieben kann
     while (zahl != 0) {
       restWert = (zahl % 10).toInt();
       zahl = zahl ~/ 10;
@@ -24,6 +26,7 @@ class UmrechnungBinary {
     int dezZahl = binToDez(zahl);
     int restWert = 0;
 
+    //geht durch die schleife bis am ende kein rest mehr bleibt
     while (dezZahl % 16 != 0) {
       restWert = (dezZahl % 16).toInt();
       dezZahl = dezZahl ~/ 16;
