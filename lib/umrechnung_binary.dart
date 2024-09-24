@@ -15,7 +15,6 @@ class UmrechnungBinary {
       dezZahl = dezZahl + (restWert * (pow(2, anzahlVerschiebung))).toInt();
       anzahlVerschiebung = anzahlVerschiebung + 1;
     }
-    print('Dezimal: $dezZahl');
     return dezZahl;
   }
 

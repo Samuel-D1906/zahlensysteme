@@ -17,7 +17,6 @@ class UmrechnungHex {
     int? sumDezimal = 0;
     int? dezimal;
     int exponent;
-
     //geht durch die schleife bis am ende kein rest mehr bleibt
     for (var i = 0; i < hexa.length; i++) {
       if (i == 0) {
@@ -25,7 +24,7 @@ class UmrechnungHex {
       } else {
         exponent = hexa.length - (i + 1);
       }
-      print('Exponent:$exponent');
+
       String ziffer = hexa[i];
       switch (ziffer) {
         case '1':
@@ -61,7 +60,6 @@ class UmrechnungHex {
       }
       sumDezimal = (sumDezimal! + dezimal!);
     }
-    print('Dezimal: $sumDezimal');
     return sumDezimal;
   }
 }
