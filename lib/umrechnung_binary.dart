@@ -21,7 +21,7 @@ class UmrechnungBinary {
 
 // Umrechnung von Binär zu Hexadezimal
 
-  binToHex(int dezZahl) {
+  dezToHex(int dezZahl) {
     String hexaDezimal = '';
     int restWert = 0;
 
